@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #474559;
+  --altColor: #ffc200;
+}
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: inherit;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.3;
+}
+
+.pd {
+  padding: 110px  0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* navbar */
+
+header {
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999999;
+  transition: 200ms linear;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+header .logo a h1 {
+  font-size: 30px;
+  color: var(--mainColor);
+}
+header nav {
+  overflow: hidden;
+}
+header nav a {
+  padding: 0 20px;
+  color: var(--mainColor);
+  transition: .3s;
+  font-size: 15px;
+  font-weight: bold;
+}
+header nav a:hover {
+  color: var(--altColor);
+}
+header .color-mode {
+  position: relative;
+  color: var(--mainColor);
+}
+header .color-mode i {
+  cursor: pointer;
+  position: absolute;
+  left: -32px;
+  font-size: 26px;
+  top: 0;
+  transform: rotate(-20deg);
+}
+header .color-mode h2 {
+  color: var(--mainColor);
+  font-size: 16px;
+}
+
+/* hero section  */
+
+.hero {
+  padding: 10% 0;
+}
+.hero .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .content .text {
+  flex: 2;
+  text-transform: capitalize;
+}
+.hero .content .text p {
+  font-size: 14px;
+  color: #5b5b5b;
+}
+.hero .content .text h1 {
+  font-size: 2.8em;
+}
+.hero .content .text h1 span {
+  color: #ffc200;
+}
+.hero .content .text p:not(:first-child) {
+  color: #5b5b5b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  width: 82%;
+}
+.hero .content .text .cta button{
+  outline: 0;
+  border: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 12px 26px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.hero .content .text .cta button:first-child {
+  background-color: #eee;
+  color: #5b5b5b;
+  margin-right: 10px;
+}
+.hero .content .text .cta button:hover:first-child {
+  color: var(--altColor);
+}
+.hero .content .text .cta button:last-child {
+  background-color: #474559;
+  color: #fff;
+}
+.hero .content .text .cta button:hover:last-child {
+  background-color: var(--altColor);
+}
+.hero .content .img {
+  flex: 1;
+  width: 450px;
+  overflow: hidden;
+}
+.hero .content .img img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* slider img  */
+.slider {
+  text-align: center;
+}
+.slider h2 {
+  font-size: 2.4em;
+}
+.slider img {
+  display: block;
+  width: 1000px;
+  margin: 0 auto;
+}
+.slider .main-img {
+  position: relative;
+  overflow: hidden
+}
+.slider .bullets span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  opacity: .2;
+  background-color: #474559;
+  margin-right: 7px;
+  transition: .2s;
+}
+.slider .bullets span.active {
+  opacity: 1;
+}
+/* Resume */ 
+
+.content-left {
+  display: flex;
+}
+.experience,
+.educations {
+  flex: 1;
+}
+.resume h2 {
+  font-size: 32px;
+}
+.timeline-wrapper {
+  position: relative;
+  padding: 22px 0;
+}
+.timeline-wrapper:last-child:before {
+  height: 0;
+}
+.timeline-wrapper:before {
+  content: "";
+  background: #474559;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 38px;
+}
+.timeline-yr {
+  background: #474559;
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+.timeline-yr span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 75px;
+}
+.timeline-info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 432px;
+  margin-left: 6em;
+}
+.timeline-info h3 {
+  margin-bottom: 10px;
+  color: #474559;
+  font-size: 22px;
+}
+.timeline-info small {
+  color: #474559;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Contact  */
+
+.contact .content {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  gap: 50px;
+}
+.contact .content .map {
+  flex: 1;
+}
+.contact .content .inputs {
+  flex: 2;
+  display: flex;
+  position: relative;
+}
+.contact .content .map {
+  background-color: #474559;
+  color: #fff;
+}
+.contact .content .map .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 35px;
+}
+.contact .content .map .info .text h3 {
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+.contact .content .map .info .text span {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact .content .map .icons i {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 17px;
+  cursor: pointer;
+} 
+.contact .content .inputs form h2 {
+  margin-bottom: 30px;
+}
+.contact .content .inputs form input {
+  margin: 0 10px 20px 0;  
+}
+.contact .content .inputs form input,
+.contact .content .inputs form textarea{
+  outline: 0;
+  border: 1px solid #474559;
+  color: #495057;
+  padding: 5px 10px;
+}
+.contact .content .inputs form textarea {
+  width: 466px;
+  margin-bottom: 20px;
+}
+.contact .content .inputs button {
+  display: block;
+  outline: 0;
+  border: 0;
+  position: absolute;
+  right: 104px;
+  bottom: -35px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 12px 33px;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #ffc200;
+  
+}
+.contact .content .inputs button:hover {
+  background-color: #474559;
+}
+
+/* footer  */
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+footer p:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer p span {
+  color: #474559;
+}
+/* Scroll To Top*/
+
+#btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  outline: 0;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid #ffc200;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  display: none;
+  color: #Fff;
+  background-color: #ffc200;
+}
+#btn i {
+  display: block;
+  font-size: 17px;
+  color: #fff;
+}
